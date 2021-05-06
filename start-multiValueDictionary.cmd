@@ -1,0 +1,1 @@
+start.cmd / k "cd <input the location of the jar file> && java -jar spreetailProject-1.0-SNAPSHOT.jar"
