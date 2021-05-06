@@ -34,13 +34,16 @@ public class MultiValueDictionay {
 
                     if (ADD.equalsIgnoreCase(operation) && oprAndValArray.length == 3) {
                         op.add(map,oprAndValArray[1],oprAndValArray[2]);
+                        continue;
                     }
 
                     if(KEYS.equalsIgnoreCase(operation)){
                         op.keys(map);
+                        continue;
                     }
                     if(MEMBERS.equalsIgnoreCase(operation) && oprAndValArray.length == 2){
                         op.members(map,oprAndValArray[1]);
+                        continue;
                     }
                     if(REMOVE.equalsIgnoreCase(operation) && oprAndValArray.length > 1 ){
                         if(oprAndValArray.length == 2 ){
@@ -48,25 +51,32 @@ public class MultiValueDictionay {
                         }else{
                             op.removeValue(map, oprAndValArray[1],oprAndValArray[2]);
                         }
+                        continue;
 
                     }
                     if(REMOVEALL.equalsIgnoreCase(operation) && oprAndValArray.length == 2){
                         op.removeAll(map,oprAndValArray[1]);
+                        continue;
                     }
                     if(CLEAR.equalsIgnoreCase(operation) && oprAndValArray.length == 1){
                         op.clear(map);
+                        continue;
                     }
                     if(KEYEXISTS.equalsIgnoreCase(operation) && oprAndValArray.length == 2){
                         op.keyExists(map, oprAndValArray[1]);
+                        continue;
                     }
                     if(VALUEEXISTS.equalsIgnoreCase(operation) && oprAndValArray.length == 3){
                         op.valueExists(map, oprAndValArray[1], oprAndValArray[2]);
+                        continue;
                     }
                     if(ALLMEMBERS.equalsIgnoreCase(operation) && oprAndValArray.length == 1){
                         op.allMembers(map);
+                        continue;
                     }
                     if(ITEMS.equalsIgnoreCase(operation) && oprAndValArray.length == 1){
                         op.items(map);
+                        continue;
                     }
                     if(EXIT.equalsIgnoreCase(operation)){
                         System.exit(0);
